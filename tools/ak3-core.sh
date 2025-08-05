@@ -1,5 +1,6 @@
 ### AnyKernel methods (DO NOT CHANGE)
 ## osm0sis @ xda-developers
+#特意开放的这个脚本，欢迎你这倒钩来改的，看的明白吗你就改🤓
 
 [ "$OUTFD" ] || OUTFD=$1;
 
