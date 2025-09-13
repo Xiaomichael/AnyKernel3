@@ -1,10 +1,11 @@
 ### AnyKernel3 Ramdisk Mod Script
 ## osm0sis @ xda-developers
+# 禁止二改，小心黑砖
 
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=KernelSU by KernelSU Developers
+kernel.string=KernelSU By KernelSU Developers
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -30,7 +31,7 @@ patch_vbmeta_flag=auto
 no_magisk_check=1
 
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
-. tools/ak3-core.sh
+. tools/flash-core.sh
 
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
 case $kernel_version in
@@ -40,6 +41,14 @@ case $kernel_version in
     *) ksu_supported=false ;;
 esac
 
+ui_print "$(echo '5YaF5qC45p6E5bu66ICFOiDlsI8g5bCPdw==' | base64 -d)"
+ui_print "$(echo 'S2VybmVsX2J1aWxkZXIgOiB4aWFveGlhb3c=' | base64 -d)"
+ui_print " "
+ui_print "$(echo '56aB5q2i5pyq57uP6K645Y+v5LqM5qyh5L+u5pS55oiW6L2s5ZSu77yM6L+d6ICF5b+F56m2' | base64 -d)"
+ui_print "$(echo 'ClVuYXV0aG9yaXplZCBtb2RpZmljYXRpb24gb3IgcmVzYWxlIGlzIHN0cmljdGx5IHByb2hpYml0ZWQuIFZpb2xhdG9ycyB3aWxsIGJlIGhlbGQgbGlhYmxlLg==' | base64 -d)"
+ui_print " "
+ui_print "$(echo '5Yqg5YWl5oiR5Lus55qEVGVsZWdyYW3nvqTnu4QgOiBAZ2tpX2tlcm5lbHNfeGlhb3hpYW93' | base64 -d)"
+ui_print "$(echo 'Sm9pbiBPdXIgVGVsZWdyYW0gR3JvdXAhIDogQGdraV9rZXJuZWxzX3hpYW94aWFvdw==' | base64 -d)"
 ui_print " " "  -> ksu_supported: $ksu_supported"
 $ksu_supported || abort "  -> Non-GKI device, abort."
 
